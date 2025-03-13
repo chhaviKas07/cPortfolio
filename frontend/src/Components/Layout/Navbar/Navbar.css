@@ -1,0 +1,298 @@
+/* Navbar.css */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 32px;
+    background-color: #45707b;
+    /* A nice blue color */
+    color: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-title {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.navbar-links {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+    /* Space between links */
+}
+
+.navbar-links li a {
+    text-decoration: none;
+    color: white;
+    /* Link color */
+    transition: color 0.3s ease;
+}
+
+.navbar-links li a:hover {
+    color: #f0c040;
+    /* Change color on hover */
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar-links {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .navbar-links li {
+        margin-bottom: 10px;
+    }
+}
+
+
+/*  */
+.contact-btn {
+    background-color: transparent;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+
+/*  */
+/* Basic Styles */
+.menuHolder {
+    position: fixed;
+    top: 50px;
+    right: 50px;
+    z-index: 1000;
+}
+
+.menu-wrap {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 0;
+    height: 0;
+    background: #45707b;
+    overflow: hidden;
+    border-bottom-left-radius: 100%;
+    transition: all 0.4s ease-in-out;
+}
+
+/* Expanding Menu */
+.show-menu .menu-wrap {
+    width: 300px;
+    height: 300px;
+    border-bottom-left-radius: 300px;
+    padding-top: 38px;
+}
+
+.menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu li {
+    margin-bottom: 20px;
+    margin-left: 110px;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+
+.menu li button {
+    color: white;
+    text-decoration: none;
+    font-size: 22px;
+    font-weight: bold;
+    text-decoration: none;
+    border: none;
+    /* Removes any default button border */
+    background: none;
+    /* Ensures no background styling */
+    cursor: pointer;
+}
+
+.menu a:hover {
+    color: black;
+}
+
+.menu li button:hover {
+    color: black;
+}
+
+/* Hamburger Button */
+.c-hamburger {
+    width: 40px;
+    height: 35px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: transparent;
+    border: none;
+    /* cursor: pointer; */
+    z-index: 2000;
+    left: -5px;
+    top: 5px;
+    /*  */
+    /* right: 0px;
+    left: -40px;
+    top: -40px;
+    z-index: -1;
+    border-radius: 30px;
+    width: 55px;
+    height: 55px;
+    background: black; */
+}
+
+.c-hamburger span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background: white;
+    position: relative;
+    top: -42px;
+    transition: 0.3s;
+    cursor: pointer;
+    /*  */
+    /* position: fixed;
+    top: 35px;
+    right: 48px;
+    z-index: 99999;
+    color: black; */
+}
+
+.c-hamburger span::before,
+.c-hamburger span::after {
+    content: "";
+    position: absolute;
+    width: 33px;
+    height: 3px;
+    background: white;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.c-hamburger span::before {
+    top: -10px;
+    left: 0px;
+    border-top: 100px;
+}
+
+.c-hamburger span::after {
+    bottom: -10px;
+    left: 0px;
+}
+
+/* Animate Hamburger Icon */
+.show-menu .c-hamburger span {
+    background: transparent;
+}
+
+.show-menu .c-hamburger span::before {
+    transform: rotate(45deg);
+    top: 0;
+}
+
+.show-menu .c-hamburger span::after {
+    transform: rotate(-45deg);
+    bottom: 0;
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 950px) {
+    .show-menu .menu-wrap {
+        width: 250px;
+        height: 250px;
+        border-bottom-left-radius: 250px;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .show-menu .menu-wrap {
+        width: 200px;
+        height: 200px;
+        border-bottom-left-radius: 200px;
+    }
+}
+
+
+/* socials */
+
+.social-icons {
+    display: flex;
+    gap: 10px;
+    margin-left: 70px;
+}
+
+.icon {
+    color: #cba87b;
+    width: 24px;
+    height: 24px;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.icon:hover {
+    transform: scale(1.1);
+    color: #ffffff;
+    /* White on hover */
+}
+
+.social-svg {
+    width: 100%;
+    height: 100%;
+    fill: currentColor;
+}
+
+.resume-icon a {
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: color 0.2s, transform 0.2s;
+}
+
+.resume-icon a:hover {
+    color: #e63946;
+    /* Red color like PDF */
+    transform: scale(1.1);
+}
+
+.social-icons {
+    display: flex;
+    gap: 25px;
+    margin-top: 35px;
+    margin-left: 130px;
+}
+
+.social-icons a {
+    font-size: 24px;
+    color: white;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #0077b5;
+    /* LinkedIn color */
+}
+
+
+/* on other page socials */
+.show-menu .menu-wrap {
+    width: 330px;
+    height: 330px;
+    border-bottom-left-radius: 300px;
+    padding-top: 38px;
+}

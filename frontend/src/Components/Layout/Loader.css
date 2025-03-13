@@ -1,0 +1,48 @@
+/* Loader Container */
+.custom-loader {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #45707b;
+    color: white;
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+}
+
+/* Top Text */
+.text-top,
+.text-bottom {
+    font-size: 3rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 10px 0;
+}
+
+/* Line Container */
+.line {
+    width: 80%;
+    height: 3px;
+    background-color: white;
+    position: relative;
+    margin: 10px 0;
+}
+
+/* Animated Progress Bar */
+.progress {
+    width: 0;
+    height: 100%;
+    background-color: black;
+    animation: progressAnimation 1s linear forwards;
+}
+
+@keyframes progressAnimation {
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 100%;
+    }
+}
