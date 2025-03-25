@@ -272,13 +272,13 @@
 
 .social-icons {
     display: flex;
-    gap: 25px;
-    margin-top: 35px;
-    margin-left: 130px;
+    gap: 18px;
+    margin-top: 30px;
+    margin-left: 122px;
 }
 
 .social-icons a {
-    font-size: 24px;
+    font-size: 20px;
     color: white;
     transition: color 0.3s ease;
 }
@@ -295,4 +295,35 @@
     height: 330px;
     border-bottom-left-radius: 300px;
     padding-top: 38px;
+}
+
+
+/* media query */
+@media screen and (max-width: 350px) {
+    .show-menu .menu-wrap {
+        width: 300px;
+        height: 267px;
+        border-bottom-left-radius: 340px;
+        padding-top: 35px;
+    }
+    .menu li {
+        margin-bottom: 13px;
+        margin-left: 106px;
+    }
+    .menu a {
+        font-size: 17px;
+        font-weight: bold;
+    }
+    .menu li button{
+        font-size: 17px; 
+    }
+    .social-icons {
+        margin-top: 20px;
+        margin-left: 105px;
+    }
+    .social-icons a {
+        font-size: 15px;
+        color: white;
+        transition: color 0.3s ease;
+    }
 }

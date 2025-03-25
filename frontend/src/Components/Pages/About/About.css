@@ -1405,3 +1405,11 @@
 .skills>div>div:hover .percentage {
     opacity: 1;
 }
+
+
+
+
+/* media query */
+@media screen and (max-width: 860px) {
+
+}

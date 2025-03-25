@@ -124,6 +124,19 @@ const Navbar = () => {
                   <FontAwesomeIcon icon={faFileAlt} />
                 </a>
               </div>
+              <a href="https://www.linkedin.com/in/yourprofile"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FontAwesomeIcon icon={faLinkedin} />
+              </a>
+              <a
+                href="https://github.com/yourusername"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FontAwesomeIcon icon={faGithub} />
+              </a>
             </div>
           )}
           {/* <Chatbot isOpen={isChatbotOpen} onClose={closeChatbot} /> */}

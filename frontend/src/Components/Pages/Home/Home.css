@@ -98,9 +98,10 @@
 
     .home-page .text-zone {
         position: initial;
-        width: 100%;
+        /* change */
+        /* width: 100%; */
+        /* padding: 10px; */
         transform: none;
-        padding: 10px;
         box-sizing: border-box;
     }
 
@@ -151,9 +152,13 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100%;
-    min-height: 800px;
-    padding: 30px 50px;
+    /* change */
+    /* width: 100%; */
+    /* min-height: 800px; */
+    /* padding: 30px 50px; */
+    /* overflow: hidden; */
+    padding: 30px 0px;
+    padding-left: 30px;
 }
 
 .content {
@@ -444,7 +449,7 @@ body {
 }
 
 .img_holder img {
-    min-width: 100%;
+    /* min-width: 100%; */
     opacity: 0;
 }
 
@@ -554,14 +559,17 @@ body {
     border: 1px solid rgba(255, 255, 255, .2);
     border-radius: 2px;
     transition: all .3s ease;
+    /* change it */
     width: 540px;
+    left: 245px;
+    /* left: 190px;
+    width: 480px; */
     height: 580px;
 }
 
 .border2 {
     position: absolute;
     z-index: 1;
-    left: 266px;
     bottom: 0;
     right: 20px;
     top: -35px;
@@ -569,6 +577,9 @@ body {
     border-radius: 2px;
     transition: all .3s ease;
     width: 480px;
+    left: 266px;
+    /* left: 230px; */
+    /* width: 410px; */
     height: 630px;
 }
 
@@ -576,7 +587,8 @@ body {
     position: relative;
     z-index: 2;
     top: 48px;
-    left: 118px;
+    /* left: 118px; */
+    left: 10px;
     padding: 27px 0 20px;
     width: 477px;
 }
@@ -593,12 +605,12 @@ body {
 }
 
 .img_holder img {
-    width: 100%;
+    /* width: 100%;
     height: auto;
-    opacity: 1;
+    object-fit: cover; */
     /* Make sure the image is visible */
-    object-fit: cover;
     /* This ensures the image fills the container proportionally */
+    opacity: 1;
 }
 
 .abs_img {
@@ -640,13 +652,14 @@ body {
 
 .right_in {
     width: 50%;
+    margin-right: 30px;
 }
 
 .img_holder img {
-    width: 100%;
+    /* width: 100%;
     height: auto;
     opacity: 1;
-    object-fit: cover;
+    object-fit: cover; */
     /* This ensures the image fills the container proportionally */
 }
 
@@ -663,16 +676,15 @@ body {
     background-repeat: no-repeat;
 }
 
-.img_holder img:last-of-type {
+/* .img_holder img:last-of-type {
     position: absolute;
     z-index: 0;
-    /* Ensure it's behind the first image */
     left: 0;
     bottom: 0;
     width: 100%;
     height: auto;
     opacity: 1;
-}
+} */
 
 
 /* typing */
@@ -747,4 +759,248 @@ body {
         opacity: 1;
         transform: translateY(0);
     }
+}
+
+
+.img_holder {
+    position: relative;
+    width: 57%;
+    height: 360px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    top: 40px;
+    left: 118px;
+}
+
+.myimg{
+    width: 70%;
+    position: absolute;
+    left: -60px;
+}
+.border1 {
+    position: fixed;
+    z-index: 1;
+    left: 245px;
+    bottom: 0;
+    right: 0;
+    top: 135px;
+    border: 1px solid rgba(255, 255, 255, .2);
+    border-radius: 2px;
+    transition: all .3s ease;
+    width: 550px;
+    left: 1355px;
+    height: 580px;
+}
+.border2 {
+    position: fixed;
+    z-index: 1;
+    bottom: 0;
+    right: 0;
+    top: 113px;
+    border: 1px solid rgba(255, 255, 255, .2);
+    border-radius: 2px;
+    transition: all .3s ease;
+    width: 470px;
+    left: 1396px;
+    /* left: 230px; */
+    /* width: 410px; */
+    height: 640px;
+}
+
+.img_holder {
+    position: fixed;
+    width: 23%;
+    height: 289px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    top: 200px;
+    left: 1500px;
+}
+.title_holder {
+    position: fixed;
+    z-index: 2;
+    top: 538px;
+    /* left: 118px; */
+    left: 1400px;
+    padding: 27px 0 20px;
+    width: 477px;
+}
+
+/* .show-menu .menu-wrap {
+    width: 315px;
+    height: 250px;
+    border-bottom-left-radius: 350px;
+    padding-top: 27px;
+} */
+
+/* media query */
+@media screen and (max-width: 1450px) {
+.border1 {
+    left: 190px;
+    width: 480px;
+}
+
+.border2 {
+    left: 230px;
+    width: 410px;
+}
+}
+
+@media screen and (max-width: 350px) {
+    .show-menu .menu-wrap {
+        width: 300px;
+        height: 267px;
+        border-bottom-left-radius: 340px;
+        padding-top: 35px;
+    }
+    .menu li {
+        margin-bottom: 13px;
+        margin-left: 106px;
+    }
+    .menu a {
+        font-size: 17px;
+        font-weight: bold;
+    }
+    .menu li button{
+        font-size: 17px; 
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .right_in {
+        opacity: 0;
+        width: 0%;
+    }
+    .homepage{
+        padding: 0;
+        width: 100%;
+        min-height: 800px;
+        padding: 30px 50px;
+        overflow: hidden;
+        padding: 30px 0px;
+    }
+    .home-page .text-zone{
+        margin-left: 0px;
+        margin-right: 0px;
+        padding: 0 18px;
+        width: 100%;
+    }
+    .home-page h1 {
+        color: #fff;
+        font-size: 50px;
+        line-height: 65px;
+    }
+    .text-zone p{
+        padding-left:  5px;
+        padding-right: 10px;
+        width: 100%;
+    }
+    .homepage .social-icons{
+        margin-left: 50px;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    .home-page .text-zone{
+        margin-left: 0px;
+        margin-right: 0px;
+        padding: 0 10px;
+        width: 100%;
+    }
+    .home-page h1 {
+        color: #fff;
+        font-size:40px;
+        line-height: 50px;
+        margin-left: 10px;
+    }
+    .text-zone p{
+        font-size: 20px;
+        padding-left:  10px;
+        padding-right: 10px;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .view-work {
+        padding: 40px 7px;
+                /* margin-left: 50px; */
+    }
+    .button-text {
+        font-size: 16px;
+    }
+    .contact-me {
+        padding: 50px 20px;
+        left: 110px;
+        /* left: 50px; */
+        /* bottom: -100px; */
+    }
+}
+
+
+@media screen and (max-width: 300px) {
+    .home-page .text-zone{
+        margin-left: 0px;
+        margin-right: 0px;
+        padding: 0 10px;
+        width: 100%;
+    }
+    .home-page h1 {
+        color: #fff;
+        font-size:25px;
+        line-height: 35px;
+    }
+    .text-zone p{
+        font-size: 15px;
+        padding-left:  10px;
+        padding-right: 10px;
+        line-height: 0.8cm;
+        width: 100%;
+        margin: 20px 0;
+    }
+    .homepage .social-icons{
+        margin-left: 20px;
+    }
+}
+
+
+
+@media screen and (max-width: 255px) {
+    .home-page .text-zone{
+        margin-left: 0px;
+        margin-right: 0px;
+        padding: 0 10px;
+        width: 100%;
+    }
+    .home-page h1 {
+        color: #fff;
+        font-size:22px;
+        line-height: 28px;
+    }
+    .text-zone p{
+        font-size: 12px;
+        padding-left:  10px;
+        padding-right: 10px;
+        line-height: 0.6cm;
+        width: 100%;
+        margin: 20px 0;
+    }
+    .view-work {
+        padding: 40px 7px;
+        margin-left: 50px;
+    }
+    .button-text {
+        font-size: 16px;
+    }
+    .contact-me {
+        padding: 50px 20px;
+        /* left: 110px; */
+        left: 50px;
+        bottom: -100px;
+    }
+    .homepage .social-icons {
+     margin-top: 150px;
+        margin-left: 10px;
+    }
+    
 }

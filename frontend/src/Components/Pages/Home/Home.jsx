@@ -8,6 +8,7 @@ import {
   faFileAlt,
   faArrowDown,
 } from "@fortawesome/free-solid-svg-icons";
+import photo from "../../../assets/chhavi.jpg";
 
 const Home = () => {
   const [showAnimation, setShowAnimation] = useState(false);
@@ -194,23 +195,38 @@ const Home = () => {
                   <FontAwesomeIcon icon={faFileAlt} />
                 </a>
               </div>
+              <a
+                href="https://www.linkedin.com/in/yourprofile"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FontAwesomeIcon icon={faLinkedin} />
+              </a>
+              <a
+                href="https://github.com/yourusername"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FontAwesomeIcon icon={faGithub} />
+              </a>
             </div>
           </div>
         </div>
-        <div className="right_in" tabIndex="5000">
+        <div className="right_in">
           <div className="right_top">
             <div className="border1" />
             <div className="border2" />
             <div className="img_holder">
-              <img
+            <img src={photo} alt="photo" className="myimg" />
+              {/* <img
                 src="https://frenify.com/work/envato/frenify/html/resumo/1/img/thumb/square.jpg"
                 alt="Thumbnail"
-              />
-              <div className="abs_img" />
-              <img
+              /> */}
+              {/* <div className="abs_img" /> */}
+              {/* <img
                 src="https://frenify.com/work/envato/frenify/html/resumo/1/img/right.jpg"
                 alt="Hero Image"
-              />
+              /> */}
             </div>
             <div className="title_holder">
               <h2>I'm a</h2>

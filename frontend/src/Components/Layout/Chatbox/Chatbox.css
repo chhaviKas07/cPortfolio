@@ -315,9 +315,12 @@
 @media screen and (max-width: 480px) {
     .chatbox-container {
         height: 90vh;
-        width: 90%;
+        width: 50%;
         bottom: 10px;
         padding: 6px;
+        right: 50px;
+        position: fixed;
+        top: 100px;
     }
 
     .chatbot-header img {
@@ -352,13 +355,22 @@
         font-size: 14px;
         padding: 6px;
     }
+    .chat-item-text{
+        display: flex;
+        flex-direction: column;
+    }
+    .chatbot-header button{
+        right: -250px;
+        font-size: 20px;
+    }
 }
 
 /* Extra Small Devices (e.g., small phones) */
 @media screen and (max-width: 360px) {
     .chatbox-container {
-        width: 95%;
-        height: 400px;
+        width: 80%;
+        height: 100%;
+        right: 100px;
     }
 
     .bot h1 {
@@ -369,11 +381,23 @@
 
     .chat-item.bot,
     .chat-item.user {
-        max-width: 60%;
+        max-width: 60%;     
+           margin-bottom: 15px;
+           font-size: 21px;
+           padding: 15px;
     }
 
     .chat-button {
         padding: 8px 10px;
-        font-size: 12px;
+        font-size: 21px;
+        padding: 15px;
+        margin-bottom: 20px;
+    }
+    .chatbox-content {
+        margin: 20px 50px;
+    }
+    .chatbot-header button {
+        right: -360px;
+        font-size: 25px;
     }
 }
