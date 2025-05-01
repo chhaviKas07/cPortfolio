@@ -201,8 +201,8 @@ import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { fab } from "@fortawesome/free-brands-svg-icons";
 import "./About.css";
-import img1 from "../../../assets/img1.jpeg"; // Replace with your image path
-import img2 from "../../../assets/img2.jpeg"; // Replace with your image path
+import img1 from "../../../assets/aileft.png"; // Replace with your image path
+import img2 from "../../../assets/airight.png"; // Replace with your image path
 import { faBuildingColumns, faClock } from "@fortawesome/free-solid-svg-icons";
 import { faBuilding } from "@fortawesome/free-solid-svg-icons";
 import {
@@ -378,10 +378,8 @@ const About = () => {
         >
           {/* Cover Photo */}
           <div className="cover-photo">
-            <img
-              src="https://th.bing.com/th/id/OIG1.wQ7nqzXG6LLji1s3MrOP"
-              alt="Education Cover"
-            />
+            <img src={img1} alt="" />
+            <div class="overlay-text"><h1>Education <br />& <br />Experience</h1></div>
           </div>
           {/* Content */}
           <div className="content">
@@ -432,10 +430,8 @@ const About = () => {
           // onMouseLeave={() => setHoveredSection("")}
         > */}
           <div className="cover-photo">
-            <img
-              src="https://th.bing.com/th/id/OIG1.wQ7nqzXG6LLji1s3MrOP"
-              alt="Skills Cover"
-            />
+            <img src={img2} alt="" />
+            <div class="overlay-text"><h1>My Skills</h1></div>
           </div>
           <h1>MY SKIILS</h1>
           <div className="content">

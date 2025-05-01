@@ -1056,3 +1056,14 @@
         margin-bottom: 10px;
     }
 }
+
+
+.close-btn {
+    font-size: 20px;
+    padding: 2px;
+    background: #4c585b;
+    color: white;
+    border-color: black;
+    border-width: 0px 4px 3px 0px;
+    cursor: pointer;
+}

@@ -324,8 +324,8 @@ body {
     font-size: 45px;
     font-weight: 100;
     position: absolute;
-    top: -38px;
-    left: -67px;
+    top: -25px;
+    left: -64px;
     animation: upDown 2s ease-in-out infinite;
 }
 
@@ -337,7 +337,7 @@ body {
     }
 
     50% {
-        transform: translateY(-18px);
+        transform: translateY(-10px);
         /* Adjust height as needed */
     }
 }
@@ -761,71 +761,6 @@ body {
     }
 }
 
-
-.img_holder {
-    position: relative;
-    width: 57%;
-    height: 360px;
-    overflow: hidden;
-    margin-bottom: 20px;
-    top: 40px;
-    left: 118px;
-}
-
-.myimg{
-    width: 70%;
-    position: absolute;
-    left: -60px;
-}
-.border1 {
-    position: fixed;
-    z-index: 1;
-    left: 245px;
-    bottom: 0;
-    right: 0;
-    top: 135px;
-    border: 1px solid rgba(255, 255, 255, .2);
-    border-radius: 2px;
-    transition: all .3s ease;
-    width: 550px;
-    left: 1355px;
-    height: 580px;
-}
-.border2 {
-    position: fixed;
-    z-index: 1;
-    bottom: 0;
-    right: 0;
-    top: 113px;
-    border: 1px solid rgba(255, 255, 255, .2);
-    border-radius: 2px;
-    transition: all .3s ease;
-    width: 470px;
-    left: 1396px;
-    /* left: 230px; */
-    /* width: 410px; */
-    height: 640px;
-}
-
-.img_holder {
-    position: fixed;
-    width: 23%;
-    height: 289px;
-    overflow: hidden;
-    margin-bottom: 20px;
-    top: 200px;
-    left: 1500px;
-}
-.title_holder {
-    position: fixed;
-    z-index: 2;
-    top: 538px;
-    /* left: 118px; */
-    left: 1400px;
-    padding: 27px 0 20px;
-    width: 477px;
-}
-
 /* .show-menu .menu-wrap {
     width: 315px;
     height: 250px;
@@ -1003,4 +938,141 @@ body {
         margin-left: 10px;
     }
     
+}
+
+
+.img_holder {
+    position: relative;
+    width: 57%;
+    height: 360px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    top: 40px;
+    left: 118px;
+}
+
+.myimg{
+    width: 70%;
+    position: absolute;
+    left: -60px;
+}
+
+/* trying to correct photo css */
+
+.img_holder {
+    position: fixed;
+    width: 23%;
+    height: 289px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    top: 200px;
+    left: 1500px;
+}
+.title_holder {
+    position: fixed;
+    z-index: 2;
+    top: 538px;
+    /* left: 118px; */
+    left: 1400px;
+    padding: 27px 0 20px;
+    width: 477px;
+}
+
+
+.border1 {
+    position: fixed;
+    z-index: 1;
+    left: 70.0vw;           /* 1355px of 1920px screen */
+    /* top: 7vh;             
+    width: 28.6vw;        
+    height: 30.2vh;        */
+    top: 15vh;
+    width: 27.6vw;
+    height: 68.2vh;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+.border2 {
+    position: fixed;
+    z-index: 1;
+    /*
+    left: 72.7vw;         
+    top: 5.9vh;             
+     width: 24.5vw;   
+    height: 33.3vh;   */
+    left: 71.7vw;
+    top: 10.9vh;
+    width: 23.5vw;
+    height: 77.3vh;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+.img_holder {
+    position: fixed;
+    width: 23vw;
+    height: 28.8vh;
+    overflow: hidden;
+    margin-bottom: 1.85vh;
+    top: 22.5vh;
+    left: 77.1vw;
+}
+
+.title_holder {
+    position: fixed;
+    z-index: 2;
+    top: 60.8vh;               /* 538px of 1080px */
+    left: 70.9vw;            /* 1400px of 1920px */
+    padding: 2.5vh 0 1.85vh;   /* 27px top, 20px bottom */
+    width: 24.8vw;             /* 477px of 1920px */
+}
+
+
+@media screen and (max-width: 1200px) {
+    
+.border1 {
+    position: fixed;
+    z-index: 1;
+    left: 62vw;
+    top: 11vh;
+    width: 32.6vw;
+    height: 68.2vh;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+.border2 {
+    position: fixed;
+    z-index: 1;
+    left: 63.7vw;
+    top: 5.9vh;
+    width: 28.5vw;
+    height: 77.3vh;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+.img_holder {
+    position: fixed;
+    width: 30vw;
+    height: 27.8vh;
+    overflow: hidden;
+    margin-bottom: 1.85vh;
+    top: 18.5vh;
+    left: 70.1vw;
+}
+
+.title_holder {
+    position: fixed;
+    z-index: 2;
+    top: 49.8vh;
+    left: 65.9vw;
+    padding: 2.5vh 0 1.85vh;
+    width: 24.8vw;
+}
 }

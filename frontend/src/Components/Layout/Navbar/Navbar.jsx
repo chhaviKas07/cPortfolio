@@ -3,7 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import "./Navbar.css";
 import Chatbot from "../Chatbox/Chatbox";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
+import { faLinkedin, faGithub, faDiscord } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope, faFileAlt } from "@fortawesome/free-solid-svg-icons";
 
 const Navbar = () => {
@@ -124,18 +124,33 @@ const Navbar = () => {
                   <FontAwesomeIcon icon={faFileAlt} />
                 </a>
               </div>
-              <a href="https://www.linkedin.com/in/yourprofile"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <FontAwesomeIcon icon={faLinkedin} />
-              </a>
               <a
-                href="https://github.com/yourusername"
+                              href="https://discord.com/users/your-discord-id"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
+                              <FontAwesomeIcon icon={faDiscord} />
+                            </a>
+                            <a
+                href="https://leetcode.com/yourleetcodeusername"
                 target="_blank"
                 rel="noopener noreferrer"
+                style={{ marginRight: '10px' }}
               >
-                <FontAwesomeIcon icon={faGithub} />
+                <img
+                  src="https://upload.wikimedia.org/wikipedia/commons/1/19/LeetCode_logo_black.png"
+                  alt="LeetCode"
+                  style={{
+                    width: '20px',
+                    height: '20px',
+                    margin: '0px',
+                    padding: '0px',
+                    position: 'relative',
+                    left: '-10px',
+                    filter: 'brightness(0) invert(1)', // This makes the logo white
+                    verticalAlign: 'middle',
+                  }}
+                />
               </a>
             </div>
           )}

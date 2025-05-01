@@ -2,12 +2,13 @@ import React, { useState, useEffect } from "react";
 import "./Home.css";
 import AnimatedLetters from "../AnimatedL/AnimatedL";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
+import { faLinkedin, faGithub, faDiscord } from "@fortawesome/free-brands-svg-icons";
 import {
   faEnvelope,
   faFileAlt,
   faArrowDown,
 } from "@fortawesome/free-solid-svg-icons";
+
 import photo from "../../../assets/chhavi.jpg";
 
 const Home = () => {
@@ -196,18 +197,32 @@ const Home = () => {
                 </a>
               </div>
               <a
-                href="https://www.linkedin.com/in/yourprofile"
+                href="https://discord.com/users/your-discord-id"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <FontAwesomeIcon icon={faLinkedin} />
+                <FontAwesomeIcon icon={faDiscord} />
               </a>
               <a
-                href="https://github.com/yourusername"
+                href="https://leetcode.com/yourleetcodeusername"
                 target="_blank"
                 rel="noopener noreferrer"
+                style={{ marginRight: '10px' }}
               >
-                <FontAwesomeIcon icon={faGithub} />
+                <img
+                  src="https://upload.wikimedia.org/wikipedia/commons/1/19/LeetCode_logo_black.png"
+                  alt="LeetCode"
+                  style={{
+                    width: '20px',
+                    height: '20px',
+                    margin: '0px',
+                    padding: '0px',
+                    position: 'relative',
+                    left: '-10px',
+                    filter: 'brightness(0) invert(1)', // This makes the logo white
+                    verticalAlign: 'middle',
+                  }}
+                />
               </a>
             </div>
           </div>
@@ -217,7 +232,7 @@ const Home = () => {
             <div className="border1" />
             <div className="border2" />
             <div className="img_holder">
-            <img src={photo} alt="photo" className="myimg" />
+              <img src={photo} alt="photo" className="myimg" />
               {/* <img
                 src="https://frenify.com/work/envato/frenify/html/resumo/1/img/thumb/square.jpg"
                 alt="Thumbnail"

@@ -106,7 +106,7 @@
 .about-sec,
 .horizontal-scroll-container,
 .scroll-section {
-    border: 1px solid red;
+    /* border: 1px solid red; */
     /* Debugging */
 }
 
@@ -479,14 +479,14 @@
     z-index: 1;
     transition: opacity 0.4s ease-in-out;
     /* change it */
-    opacity: 0;
+    opacity: 1;
 }
 
 .scroll-section .content {
     position: relative;
     z-index: 2;
     /* change it */
-    opacity: 1;
+    opacity: 0;
     transform: translateY(20px);
     transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
 }
@@ -641,7 +641,7 @@
     position: relative;
     z-index: 2;
     /* change it */
-    opacity: 1;
+    opacity: 0;
     transform: translateY(20px);
     transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
 }
@@ -1413,3 +1413,40 @@
 @media screen and (max-width: 860px) {
 
 }
+
+
+/* new cover photo css */
+.cover-photo {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .cover-photo img {
+    width: 100%; /* or any fixed width like 500px */
+    height: auto;
+  }
+  
+  .overlay-text {
+    position: absolute;
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Perfect centering */
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.7); /* Optional: for better visibility */
+    
+  }
+
+  .overlay-text h1{
+    font-size: 100px;
+    font-family: "Style Script", cursive;
+  font-weight: 800;
+  font-style: normal;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  }
+
+  body{
+    overflow: hidden;
+  }
