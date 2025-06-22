@@ -6,6 +6,7 @@
     animation-delay: 1s;
     animation-fill-mode: forwards;
     min-width: 10px;
+    
 }
 
 .text-animate-hover {
@@ -17,10 +18,12 @@
 .text-animate-hover:hover {
     animation: rubberBand 1s;
     color: #ffd700;
+    
 }
 
 /* Adding the animation delay for each .text-animate._# from 1 to 35 */
 .text-animate._1 {
+    
     animation-delay: 0.1s;
 }
 
@@ -188,6 +191,7 @@
     /* Start hidden */
     animation: bounceIn 1s forwards;
     min-width: 10px;
+      font-family: "Pacifico", cursive;
 }
 
 .text-animate._1 {
@@ -292,6 +296,7 @@
     min-width: 10px;
     display: inline-block;
     animation-fill-mode: both;
+      font-family: "Pacifico", cursive;
     /* margin: 7px 0; */
 }
 

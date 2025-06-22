@@ -4,6 +4,7 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    font-family: "Merienda", cursive;
 }
 
 .home-page .text-zone {
@@ -11,7 +12,7 @@
     justify-content: center;
     flex-direction: column;
     width: 50%;
-    margin-top: 50px;
+    margin-top: 30px;
     margin-left: 50px;
 }
 
@@ -90,11 +91,11 @@
 
 @media screen and (max-width: 1200px) {
 
-    .tags,
+    /* .tags,
     .home-page h1:before,
     .home-page h1:after {
         display: none;
-    }
+    } */
 
     .home-page .text-zone {
         position: initial;
@@ -157,7 +158,7 @@ body {
     /* min-height: 800px; */
     /* padding: 30px 50px; */
     /* overflow: hidden; */
-    padding: 30px 0px;
+    /* padding: 30px 0px; */
     padding-left: 30px;
 }
 
@@ -259,6 +260,7 @@ body {
     display: flex;
     gap: 1.5rem;
     margin-bottom: 1rem;
+    /* margin-bottom: 0px; */
     position: relative;
 }
 
@@ -270,7 +272,7 @@ body {
 }
 
 .view-work {
-    padding: 65px 26px;
+    padding: 62px 26px;
     border-radius: 100px;
     background-color: #b2b9d0;
     color: black;
@@ -689,7 +691,9 @@ body {
 
 /* typing */
 .text-zone p {
-    margin: 50px 0;
+       margin: 0;
+    margin-top: 40px;
+    margin-bottom: 30px;
     font-size: 20px;
     color: white;
     line-height: 1.0cm;
@@ -703,7 +707,7 @@ body {
 .homepage .social-icons {
     display: flex;
     flex-direction: column;
-    margin-top: 25px;
+    margin-top: 5px;
     margin-left: 320px;
 }
 
@@ -827,8 +831,9 @@ body {
     }
     .text-zone p{
         padding-left:  5px;
-        padding-right: 10px;
+        /* padding-right: 10px; */
         width: 100%;
+        
     }
     .homepage .social-icons{
         margin-left: 50px;
@@ -856,9 +861,26 @@ body {
     }
 }
 
+@media screen and (max-width: 360px) {
+    /* .view-work {
+    padding: 62px 22px;
+} */
+     .view-work {
+        padding: 60px 26px;
+    }
+.button-text {
+        font-size: 16px;
+    }
+    .contact-me {
+    padding: 60px 47px;
+    }
+}
+
+
 @media screen and (max-width: 320px) {
     .view-work {
         padding: 40px 7px;
+                padding: 47px 11px;
                 /* margin-left: 50px; */
     }
     .button-text {
@@ -866,11 +888,14 @@ body {
     }
     .contact-me {
         padding: 50px 20px;
+        padding: 58px 27px;
         left: 110px;
         /* left: 50px; */
         /* bottom: -100px; */
     }
 }
+
+
 
 
 @media screen and (max-width: 300px) {
@@ -896,6 +921,31 @@ body {
     .homepage .social-icons{
         margin-left: 20px;
     }
+    
+    .view-work {
+        padding: 40px 7px;
+        margin-left: 50px;
+    }
+    .button-text {
+        font-size: 16px;
+    }
+    .contact-me {
+        padding: 50px 20px;
+        /* left: 110px; */
+        left: 50px;
+        bottom: -100px;
+    }
+    
+    .homepage .social-icons {
+     /* margin-top: 150px; */
+             margin-top: 110px;
+        margin-left: 10px;
+    }
+    .text-zone p {
+        padding-left: 10px !important;
+        padding-right: 5px;
+        width: 100%;
+    }
 }
 
 
@@ -919,23 +969,6 @@ body {
         line-height: 0.6cm;
         width: 100%;
         margin: 20px 0;
-    }
-    .view-work {
-        padding: 40px 7px;
-        margin-left: 50px;
-    }
-    .button-text {
-        font-size: 16px;
-    }
-    .contact-me {
-        padding: 50px 20px;
-        /* left: 110px; */
-        left: 50px;
-        bottom: -100px;
-    }
-    .homepage .social-icons {
-     margin-top: 150px;
-        margin-left: 10px;
     }
     
 }
@@ -982,7 +1015,9 @@ body {
 .border1 {
     position: fixed;
     z-index: 1;
-    left: 70.0vw;           /* 1355px of 1920px screen */
+    left: 70.0vw;    
+    left: 67vw;
+    /* 1355px of 1920px screen */
     /* top: 7vh;             
     width: 28.6vw;        
     height: 30.2vh;        */
@@ -1003,6 +1038,7 @@ body {
      width: 24.5vw;   
     height: 33.3vh;   */
     left: 71.7vw;
+        left: 69.7vw;
     top: 10.9vh;
     width: 23.5vw;
     height: 77.3vh;
@@ -1019,13 +1055,17 @@ body {
     margin-bottom: 1.85vh;
     top: 22.5vh;
     left: 77.1vw;
+        left: 75.1vw;
 }
 
 .title_holder {
     position: fixed;
     z-index: 2;
-    top: 60.8vh;               /* 538px of 1080px */
-    left: 70.9vw;            /* 1400px of 1920px */
+    /* top: 60.8vh;               538px of 1080px */
+    top: 57.8vh;
+    left: 70.9vw;    
+        left: 69.9vw;
+    /* 1400px of 1920px */
     padding: 2.5vh 0 1.85vh;   /* 27px top, 20px bottom */
     width: 24.8vw;             /* 477px of 1920px */
 }
@@ -1075,4 +1115,214 @@ body {
     padding: 2.5vh 0 1.85vh;
     width: 24.8vw;
 }
+}
+
+@media screen and (max-width: 1600px) {
+
+    .border1 {
+     left: 65vw;
+    top: 15vh;
+    width: 30.6vw;
+    }
+        .border2 {
+            left: 66.7vw;
+    top: 10.9vh;
+    width: 26.5vw;
+    height: 77.3vh;
+        }
+    .img_holder {
+           left: 74.1vw;
+    }
+          .title_holder {
+                top: 55.8vh;
+    left: 66.9vw;
+    width: 25.8vw;
+    }
+}
+
+
+ 
+@media screen and (max-width: 1400px) {
+
+    .border1 {
+                   left: 61vw;
+        top: 15vh;
+        width: 33.6vw;
+    }
+        .border2 {
+             left: 62.7vw;
+        top: 10.9vh;
+        width: 28.5vw;
+        height: 77.3vh;
+        }
+    .img_holder {
+                    left: 70.1vw;
+                  width: 26vw;
+    top: 22.5vh;
+    }
+          .title_holder {
+                   top: 55.8vh;
+        left: 62.9vw;
+        width: 27.8vw;
+    }
+}
+ 
+@media screen and (max-width: 1200px) {
+    .border1 {
+        width: 35.6vw;
+    }
+        .border2 {
+        width: 31.5vw;
+        }
+    .img_holder {
+        left: 72.1vw;
+    }
+          .title_holder {
+        position: fixed;
+        z-index: 2;
+        top: 49.8vh;
+        left: 63.9vw;
+        padding: 0px;
+        width: 30.8vw;
+    }
+}
+
+
+@media screen and (max-width: 1030px) {
+    .home-page .text-zone {
+
+    margin-top: 10px;
+    }
+    .home-page h1 {
+    font-size: 60px;}
+
+    
+    .home-page .text-zone {
+    margin-left: 20px;
+}
+.home-page h1:before {
+    font-size: 18px;
+    position: absolute;
+          margin-top: -49px;
+        left: 15px;
+    opacity: 0.6;
+}
+    .home-page .text-zone {
+        margin-top: 30px;
+    }
+
+    .home-page h1:after {
+    font-size: 18px;
+    position: absolute;
+    margin-top: 18px;
+    margin-left: 15px;
+    animation: fadeIn 1s 1.7s backwards;
+    opacity: 0.6;
+}
+}
+
+@media screen and (max-width: 505px) {
+    .home-page .text-zone {
+
+    margin-top: 10px;
+    }
+    .home-page h1 {
+    font-size: 50px;
+}
+  .text-zone p{
+        padding-left:  0px;
+        padding-right: 0px;
+        margin-top: 20px;
+    }
+}
+
+@media screen and (max-width: 438px) {
+    .home-page h1 {
+    font-size: 40px;
+}
+.text-zone p {
+    font-size: 17px;
+}
+.home-page h1:before {
+    font-size: 15px;
+    position: absolute;
+          margin-top: -49px;
+        left: 15px;
+    opacity: 0.6;
+}
+    .home-page .text-zone {
+        margin-top: 30px;
+    }
+
+    .home-page h1:after {
+    font-size: 15px;
+    position: absolute;
+        margin-top: 10px;
+        margin-left: 15px;
+    animation: fadeIn 1s 1.7s backwards;
+    opacity: 0.6;
+}
+    .home-page h1 {
+        line-height: 55px;
+    }
+    
+}
+
+@media screen and (max-width: 372px) {
+    .home-page h1 {
+    font-size: 30px;}
+    .text-zone p {
+    font-size: 15px;
+        line-height: 0.8cm;
+}
+
+.home-page h1:before {
+    font-size: 15px;
+    position: absolute;
+          margin-top: -40px;
+        left: 15px;
+    opacity: 0.6;
+}
+    .home-page .text-zone {
+        margin-top: 10px;
+    }
+
+    .home-page h1:after {
+    font-size: 15px;
+    position: absolute;
+        margin-top: 5px;
+        margin-left: 10px;
+    animation: fadeIn 1s 1.7s backwards;
+    opacity: 0.6;
+}
+    .home-page h1 {
+        line-height: 40px;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    .home-page .text-zone {
+        margin-left: 5px;
+    }
+}
+
+@media screen and (min-width: 1500px) and (max-width: 1600px) {
+.text-zone p {
+    margin: 0;
+    margin-top: 35px;
+    margin-bottom: 27px;
+}
+.buttons {
+    margin-bottom: 0;
+}
+.homepage .social-icons {
+    display: flex;
+    flex-direction: column;
+    margin-top: 5px;
+    margin-left: 320px;
+}
+    .timeline .education p {
+        padding-left: 70px;
+        position: relative;
+    }
 }

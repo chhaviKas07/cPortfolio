@@ -96,6 +96,19 @@ const Chatbot = ({ isOpen, onClose }) => {
   }, [messages, showOtherOptions]);
 
   if (!isOpen) return null;
+// trying menu
+  useEffect(() => {
+    if (isOpen) {
+      document.body.classList.add('chatbot-open');
+    } else {
+      document.body.classList.remove('chatbot-open');
+    }
+
+    // Optional cleanup
+    return () => {
+      document.body.classList.remove('chatbot-open');
+    };
+  }, [isOpen]);
 
   return (
     // <div className="botlogo">

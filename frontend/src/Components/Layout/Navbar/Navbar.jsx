@@ -93,7 +93,7 @@ const Navbar = () => {
           {location.pathname !== "/" && (
             <div className="social-icons">
               <a
-                href="https://www.linkedin.com/in/yourprofile"
+                href="https://www.linkedin.com/in/chhavi-kashyap7"
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={handleCloseNavbar}
@@ -101,7 +101,7 @@ const Navbar = () => {
                 <FontAwesomeIcon icon={faLinkedin} />
               </a>
               <a
-                href="https://github.com/yourusername"
+                href="https://github.com/chhaviKas07"
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={handleCloseNavbar}
@@ -109,14 +109,14 @@ const Navbar = () => {
                 <FontAwesomeIcon icon={faGithub} />
               </a>
               <a
-                href="mailto:your.email@example.com"
+                href="mailto:chhavi0419@gmail.com"
                 onClick={handleCloseNavbar}
               >
                 <FontAwesomeIcon icon={faEnvelope} />
               </a>
               <div className="resume-icon">
                 <a
-                  href="/your-resume.pdf"
+                  href="/ChhaviKashyapResume.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
                   onClick={handleCloseNavbar}
@@ -125,14 +125,14 @@ const Navbar = () => {
                 </a>
               </div>
               <a
-                              href="https://discord.com/users/your-discord-id"
+                              href="https://discord.com/users/chhavi07"
                               target="_blank"
                               rel="noopener noreferrer"
                             >
                               <FontAwesomeIcon icon={faDiscord} />
                             </a>
                             <a
-                href="https://leetcode.com/yourleetcodeusername"
+                href="https://leetcode.com/u/kchhavi19/"
                 target="_blank"
                 rel="noopener noreferrer"
                 style={{ marginRight: '10px' }}

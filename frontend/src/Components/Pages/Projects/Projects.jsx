@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./Projects.css";
 const projects = [
   {
@@ -32,252 +32,98 @@ const projects = [
       "This is a website where you can sell the eco-friendly products and ask about your queries. This is a website where you can sell the eco-friendly products and ask about your queries. This is a website where you can sell the eco-friendly products and ask about your queries",
     imageUrl:
       "https://denisechandler.com/wp-content/themes/denise_chandler_2024/images/screenshots/hipimage.jpg",
-    technologies: {
-      frontend: {
-        stack: [
-          {
-            name: "React",
-            logo: "https://maraviyainfotech.com/projects/biox-html/onepage/assets/img/about/logo-1.png",
-          },
-          {
-            name: "Node.js",
-            logo: "https://maraviyainfotech.com/projects/biox-html/onepage/assets/img/about/logo-3.png",
-          },
-        ],
-      },
-      backend: {
-        stack: [
-          {
-            name: "PHP",
-            logo: "https://maraviyainfotech.com/projects/biox-html/onepage/assets/img/about/logo-4.png",
-          },
-          {
-            name: "Python",
-            logo: "https://maraviyainfotech.com/projects/biox-html/onepage/assets/img/about/logo-5.png",
-          },
-        ],
-      },
-      graphics: {
-        stack: [
-          {
-            name: "Photoshop",
-            logo: "https://maraviyainfotech.com/projects/biox-html/onepage/assets/img/about/logo-1.png",
-          },
-          {
-            name: "Sketch",
-            logo: "https://maraviyainfotech.com/projects/biox-html/onepage/assets/img/about/logo-3.png",
-          },
-        ],
-      },
-    },
+    technologies: [
+      { name: "MERN" },
+      { name: "Restful API" },
+      { name: "Thunderclient" },
+      { name: "IBM Cloud Watson" },
+      { name: "NLP" },
+    ],
     links: {
       demo: "https://project1-demo-link.com",
       repository: "https://github.com/user/project1",
     },
     name: "Eco-friendly Marketplace",
   },
-  {
+   {
     coverImage:
       "https://denisechandler.com/wp-content/themes/denise_chandler_2024/images/linkletter.png",
-    title: "Project 3",
-    type: "Web Design/Development",
-    description: "This is a brief description of project 1.",
+    title: "Project 1",
+    type: "Web Design / Development",
+    description:
+      "This is a website where you can sell the eco-friendly products and ask about your queries. This is a website where you can sell the eco-friendly products and ask about your queries. This is a website where you can sell the eco-friendly products and ask about your queries",
     imageUrl:
-      "https://denisechandler.com/wp-content/themes/denise_chandler_2024/images/linkletter.png",
-    technologies: {
-      frontend: {
-        stack: [
-          {
-            name: "React",
-            logo: "https://maraviyainfotech.com/projects/biox-html/onepage/assets/img/about/logo-1.png",
-          },
-          {
-            name: "Node.js",
-            logo: "https://maraviyainfotech.com/projects/biox-html/onepage/assets/img/about/logo-3.png",
-          },
-        ],
-      },
-      backend: {
-        stack: [
-          {
-            name: "PHP",
-            logo: "https://maraviyainfotech.com/projects/biox-html/onepage/assets/img/about/logo-4.png",
-          },
-          {
-            name: "Python",
-            logo: "https://maraviyainfotech.com/projects/biox-html/onepage/assets/img/about/logo-5.png",
-          },
-        ],
-      },
-      graphics: {
-        stack: [
-          {
-            name: "Photoshop",
-            logo: "https://maraviyainfotech.com/projects/biox-html/onepage/assets/img/about/logo-1.png",
-          },
-          {
-            name: "Sketch",
-            logo: "https://maraviyainfotech.com/projects/biox-html/onepage/assets/img/about/logo-3.png",
-          },
-        ],
-      },
-    },
+      "https://denisechandler.com/wp-content/themes/denise_chandler_2024/images/screenshots/hipimage.jpg",
+    technologies: [
+      { name: "MERN" },
+      { name: "Restful API" },
+      { name: "Thunderclient" },
+      { name: "IBM Cloud Watson" },
+      { name: "NLP" },
+    ],
     links: {
       demo: "https://project1-demo-link.com",
       repository: "https://github.com/user/project1",
     },
     name: "Eco-friendly Marketplace",
-  },
-  {
+  },  {
     coverImage:
       "https://denisechandler.com/wp-content/themes/denise_chandler_2024/images/linkletter.png",
-    title: "Project 4",
-    type: "Web Design/Development",
-    description: "This is a brief description of project 1.",
+    title: "Project 1",
+    type: "Web Design / Development",
+    description:
+      "This is a website where you can sell the eco-friendly products and ask about your queries. This is a website where you can sell the eco-friendly products and ask about your queries. This is a website where you can sell the eco-friendly products and ask about your queries",
     imageUrl:
-      "https://denisechandler.com/wp-content/themes/denise_chandler_2024/images/linkletter.png",
-    technologies: {
-      frontend: {
-        stack: [
-          {
-            name: "React",
-            logo: "https://maraviyainfotech.com/projects/biox-html/onepage/assets/img/about/logo-1.png",
-          },
-          {
-            name: "Node.js",
-            logo: "https://maraviyainfotech.com/projects/biox-html/onepage/assets/img/about/logo-3.png",
-          },
-        ],
-      },
-      backend: {
-        stack: [
-          {
-            name: "PHP",
-            logo: "https://maraviyainfotech.com/projects/biox-html/onepage/assets/img/about/logo-4.png",
-          },
-          {
-            name: "Python",
-            logo: "https://maraviyainfotech.com/projects/biox-html/onepage/assets/img/about/logo-5.png",
-          },
-        ],
-      },
-      graphics: {
-        stack: [
-          {
-            name: "Photoshop",
-            logo: "https://maraviyainfotech.com/projects/biox-html/onepage/assets/img/about/logo-1.png",
-          },
-          {
-            name: "Sketch",
-            logo: "https://maraviyainfotech.com/projects/biox-html/onepage/assets/img/about/logo-3.png",
-          },
-        ],
-      },
-    },
+      "https://denisechandler.com/wp-content/themes/denise_chandler_2024/images/screenshots/hipimage.jpg",
+    technologies: [
+      { name: "MERN" },
+      { name: "Restful API" },
+      { name: "Thunderclient" },
+      { name: "IBM Cloud Watson" },
+      { name: "NLP" },
+    ],
     links: {
       demo: "https://project1-demo-link.com",
       repository: "https://github.com/user/project1",
     },
     name: "Eco-friendly Marketplace",
-  },
-  {
+  },  {
     coverImage:
       "https://denisechandler.com/wp-content/themes/denise_chandler_2024/images/linkletter.png",
-    title: "Project 5",
-    type: "Web Design/Development",
-    description: "This is a brief description of project 1.",
+    title: "Project 1",
+    type: "Web Design / Development",
+    description:
+      "This is a website where you can sell the eco-friendly products and ask about your queries. This is a website where you can sell the eco-friendly products and ask about your queries. This is a website where you can sell the eco-friendly products and ask about your queries",
     imageUrl:
-      "https://denisechandler.com/wp-content/themes/denise_chandler_2024/images/linkletter.png",
-    technologies: {
-      frontend: {
-        stack: [
-          {
-            name: "React",
-            logo: "https://maraviyainfotech.com/projects/biox-html/onepage/assets/img/about/logo-1.png",
-          },
-          {
-            name: "Node.js",
-            logo: "https://maraviyainfotech.com/projects/biox-html/onepage/assets/img/about/logo-3.png",
-          },
-        ],
-      },
-      backend: {
-        stack: [
-          {
-            name: "PHP",
-            logo: "https://maraviyainfotech.com/projects/biox-html/onepage/assets/img/about/logo-4.png",
-          },
-          {
-            name: "Python",
-            logo: "https://maraviyainfotech.com/projects/biox-html/onepage/assets/img/about/logo-5.png",
-          },
-        ],
-      },
-      graphics: {
-        stack: [
-          {
-            name: "Photoshop",
-            logo: "https://maraviyainfotech.com/projects/biox-html/onepage/assets/img/about/logo-1.png",
-          },
-          {
-            name: "Sketch",
-            logo: "https://maraviyainfotech.com/projects/biox-html/onepage/assets/img/about/logo-3.png",
-          },
-        ],
-      },
-    },
+      "https://denisechandler.com/wp-content/themes/denise_chandler_2024/images/screenshots/hipimage.jpg",
+    technologies: [
+      { name: "MERN" },
+      { name: "Restful API" },
+      { name: "Thunderclient" },
+      { name: "IBM Cloud Watson" },
+      { name: "NLP" },
+    ],
     links: {
       demo: "https://project1-demo-link.com",
       repository: "https://github.com/user/project1",
     },
     name: "Eco-friendly Marketplace",
-  },
-  {
+  },  {
     coverImage:
       "https://denisechandler.com/wp-content/themes/denise_chandler_2024/images/linkletter.png",
-    title: "Project 6",
-    type: "Web Design/Development",
-    description: "This is a brief description of project 1.",
+    title: "Project 1",
+    type: "Web Design / Development",
+    description:
+      "This is a website where you can sell the eco-friendly products and ask about your queries. This is a website where you can sell the eco-friendly products and ask about your queries. This is a website where you can sell the eco-friendly products and ask about your queries",
     imageUrl:
-      "https://denisechandler.com/wp-content/themes/denise_chandler_2024/images/linkletter.png",
-    technologies: {
-      frontend: {
-        stack: [
-          {
-            name: "React",
-            logo: "https://maraviyainfotech.com/projects/biox-html/onepage/assets/img/about/logo-1.png",
-          },
-          {
-            name: "Node.js",
-            logo: "https://maraviyainfotech.com/projects/biox-html/onepage/assets/img/about/logo-3.png",
-          },
-        ],
-      },
-      backend: {
-        stack: [
-          {
-            name: "PHP",
-            logo: "https://maraviyainfotech.com/projects/biox-html/onepage/assets/img/about/logo-4.png",
-          },
-          {
-            name: "Python",
-            logo: "https://maraviyainfotech.com/projects/biox-html/onepage/assets/img/about/logo-5.png",
-          },
-        ],
-      },
-      graphics: {
-        stack: [
-          {
-            name: "Photoshop",
-            logo: "https://maraviyainfotech.com/projects/biox-html/onepage/assets/img/about/logo-1.png",
-          },
-          {
-            name: "Sketch",
-            logo: "https://maraviyainfotech.com/projects/biox-html/onepage/assets/img/about/logo-3.png",
-          },
-        ],
-      },
-    },
+      "https://denisechandler.com/wp-content/themes/denise_chandler_2024/images/screenshots/hipimage.jpg",
+    technologies: [
+      { name: "MERN" },
+      { name: "Restful API" },
+      { name: "Thunderclient" },
+      { name: "IBM Cloud Watson" },
+      { name: "NLP" },
+    ],
     links: {
       demo: "https://project1-demo-link.com",
       repository: "https://github.com/user/project1",
@@ -292,9 +138,35 @@ const Projects = () => {
     setSelectedProject(project);
   };
 
+  // const handleCloseModal = () => {
+  //   setSelectedProject(null);
+  // };
+
+
+  // animation
+  const [isModalVisible, setIsModalVisible] = useState(false);
+  useEffect(() => {
+    if (selectedProject) {
+      setTimeout(() => setIsModalVisible(true), 10); // allow animation trigger
+    } else {
+      setIsModalVisible(false);
+    }
+  }, [selectedProject]);
+
   const handleCloseModal = () => {
-    setSelectedProject(null);
+    setIsModalVisible(false);
+    setTimeout(() => {
+      setSelectedProject(null); // close modal after animation
+    }, 300); // duration must match your CSS
   };
+
+  useEffect(() => {
+  const navbar = document.querySelector('.c-hamburger');
+  if (navbar) {
+    navbar.style.display = isModalVisible ? 'none' : '';
+  }
+}, [isModalVisible]);
+ 
 
   return (
     // <div className="projects-container">
@@ -404,7 +276,8 @@ const Projects = () => {
         ))}
       </div>
       {selectedProject && (
-        <div className="modal">
+        // <div className="modal">
+        <div className={`modal  ${isModalVisible ? 'show' : 'hide'}`}>
           <div className="modal-content">
             <button className="close-btn" onClick={handleCloseModal}>
               X

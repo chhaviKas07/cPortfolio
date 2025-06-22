@@ -139,7 +139,7 @@ const Home = () => {
               <span className="button-text">View Resume</span>
               <a
                 className=" download-icon"
-                href="https://www.linkedin.com/in/yourprofile"
+                href="/ChhaviKashyapResume.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -163,7 +163,18 @@ const Home = () => {
                 </svg>
               </a>
             </button>
-            <button className="button contact-me">Contact Me</button>
+            {/* <a href="mailto:youremail@gmail.com">
+  <button className="button contact-me">Contact Me</button>
+</a> */}
+{/* <a href="mailto:youremail@gmail.com" className="button contact-me">Contact Me</a> */}
+<button
+  onClick={() => window.location.href = 'mailto:chhavi0419@gmail.com'}
+  className="button contact-me"
+>
+  Contact Me
+</button>
+
+
           </div>
           <div className="social-icons">
             <div>
@@ -171,25 +182,25 @@ const Home = () => {
             </div>
             <div className="soc-icons">
               <a
-                href="https://www.linkedin.com/in/yourprofile"
+                href="https://www.linkedin.com/in/chhavi-kashyap7"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <FontAwesomeIcon icon={faLinkedin} />
               </a>
               <a
-                href="https://github.com/yourusername"
+                href="https://github.com/chhaviKas07"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <FontAwesomeIcon icon={faGithub} />
               </a>
-              <a href="mailto:your.email@example.com">
+              <a href="mailto:chhavi0419@gmail.com">
                 <FontAwesomeIcon icon={faEnvelope} />
               </a>
               <div className="resume-icon">
                 <a
-                  href="/your-resume.pdf"
+                  href="/ChhaviKashyapResume.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -197,14 +208,14 @@ const Home = () => {
                 </a>
               </div>
               <a
-                href="https://discord.com/users/your-discord-id"
+                href="https://discord.com/users/chhavi07"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <FontAwesomeIcon icon={faDiscord} />
               </a>
               <a
-                href="https://leetcode.com/yourleetcodeusername"
+                href="https://leetcode.com/u/kchhavi19/"
                 target="_blank"
                 rel="noopener noreferrer"
                 style={{ marginRight: '10px' }}

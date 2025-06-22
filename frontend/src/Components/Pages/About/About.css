@@ -402,6 +402,8 @@
     position: relative;
     display: flex;
     align-items: center;
+    margin: 0;
+    padding: 0;
 }
 
 .skills .skills-content {
@@ -718,6 +720,7 @@
 .skills .skills-content {
     display: flex;
     flex-wrap: wrap;
+    overflow-y: scroll;
 }
 
 .skills>div>div {
@@ -903,7 +906,7 @@
 }
 
 .skills {
-    padding: 1rem;
+    padding: 0;
 }
 
 .skill-item {
@@ -1208,6 +1211,9 @@
     font-size: 40px;
     font-weight: 600;
     font-style: normal;
+    font-family: "Kaushan Script", cursive;
+    font-weight: 400;
+    font-style: normal;
 }
 
 
@@ -1351,7 +1357,10 @@
     font-weight: 600;
     font-style: normal;
     margin-top: 30px;
-    margin-bottom: 15px;
+    margin-bottom: 0px;
+    font-family: "Kaushan Script", cursive;
+    font-weight: 400;
+    font-style: normal;
 }
 
 .skills-content {
@@ -1410,43 +1419,1717 @@
 
 
 /* media query */
-@media screen and (max-width: 860px) {
-
-}
+@media screen and (max-width: 860px) {}
 
 
 /* new cover photo css */
 .cover-photo {
     position: relative;
     display: inline-block;
-  }
-  
-  .cover-photo img {
-    width: 100%; /* or any fixed width like 500px */
+}
+
+.cover-photo img {
+    width: 100%;
+    /* or any fixed width like 500px */
     height: auto;
-  }
-  
-  .overlay-text {
+}
+
+.overlay-text {
     position: absolute;
-    top: 50%; /* Center vertically */
-    left: 50%; /* Center horizontally */
-    transform: translate(-50%, -50%); /* Perfect centering */
+    top: 50%;
+    /* Center vertically */
+    left: 50%;
+    /* Center horizontally */
+    transform: translate(-50%, -50%);
+    /* Perfect centering */
     color: white;
     font-size: 24px;
     font-weight: bold;
-    text-shadow: 2px 2px 5px rgba(0,0,0,0.7); /* Optional: for better visibility */
-    
-  }
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    /* Optional: for better visibility */
 
-  .overlay-text h1{
+}
+
+.overlay-text h1 {
     font-size: 100px;
     font-family: "Style Script", cursive;
-  font-weight: 800;
-  font-style: normal;
-  text-align: center;
-  color: rgb(255, 255, 255);
-  }
+    font-weight: 800;
+    font-style: normal;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    line-height: 3.2cm;
+}
 
-  body{
+body {
     overflow: hidden;
-  }
+}
+
+/* responsive */
+@media screen and (max-width: 1700px) {
+    .scroll-section.edusec {
+        display: flex;
+    }
+
+}
+
+@media screen and (min-width: 1700px) {
+    .scroll-section.edusec {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+}
+
+/* ========== RESPONSIVE DESIGN FIXES ========== */
+@media screen and (max-width: 900px) {
+    .horizontal-scroll-container {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .scroll-section {
+        width: 100vw !important;
+        height: auto;
+        padding: 20px 10px;
+        transition: none;
+        opacity: 1 !important;
+    }
+
+    .scroll-section .cover-photo {
+        display: none;
+    }
+
+    .scroll-section .content {
+        opacity: 1 !important;
+        transform: translateY(0) !important;
+    }
+
+    .overlay-text {
+        display: none;
+    }
+
+    .skills-content {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 10px 20px;
+        gap: 30px 30px;
+    }
+
+    .skill-item {
+        width: 100px;
+        height: 100px;
+    }
+
+    .skill-name {
+        font-size: 14px;
+        top: 90px;
+        width: 120px;
+    }
+
+    .timeline h1,
+    .skillsec h1 {
+        font-size: 28px;
+        text-align: center;
+    }
+
+    .timeline ol li>div {
+        width: 90%;
+        left: 0;
+        margin-left: 5%;
+    }
+
+    .timeline ol {
+        padding: 100px 20px 100px 20px;
+    }
+
+    .timeline .education p {
+        font-size: 1rem;
+        margin: 10px 0;
+    }
+
+    .timeline .education h4 {
+        font-size: 1.2rem;
+        margin-bottom: 10px;
+    }
+
+    .skills {
+        padding: 10px;
+    }
+
+    body {
+        overflow: auto;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .skills-content {
+        grid-template-columns: 1fr;
+        padding: 10px;
+        gap: 20px;
+    }
+
+    .timeline h1,
+    .skillsec h1 {
+        font-size: 24px;
+    }
+
+    .skill-name {
+        font-size: 12px;
+        width: 100px;
+    }
+
+    .skill-icon {
+        font-size: 30px;
+    }
+}
+
+
+/* adding tab and vertical for mobile devices */
+/* ======== Tab Switcher ======== */
+.tab-switch {
+    display: none;
+    margin: 20px auto;
+    justify-content: center;
+    gap: 2px;
+}
+
+.tab-switch button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #9ab6b2;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    margin-bottom: 5px;
+}
+
+.tab-switch button.active {
+    background-color: #9ab6b2;
+    color: white;
+}
+
+/* ======== Vertical Timeline Styling ======== */
+@media screen and (max-width: 900px) {
+    .tab-switch {
+        display: flex;
+    }
+
+    /* .timeline ol {
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+        gap: 15px;
+    }
+
+    .timeline ol li {
+        position: relative;
+        width: 100% !important;
+        margin: 0 auto;
+        padding: 15px;
+        background-color: #f0f0f0;
+        border-radius: 12px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        list-style-type: none;
+    }  */
+
+    /* .timeline ol li>div {
+        position: relative !important;
+        left: 0 !important;
+        width: 100% !important;
+        margin: 0 !important;
+    } */
+
+    .timeline ol li::after,
+    .timeline ol li>div::before {
+        /* display: none; */
+    }
+
+    .about-sec .timeline ol li:nth-child(odd)>div,
+    .about-sec .timeline ol li:nth-child(even)>div {
+        margin-top: 0;
+        top: 0;
+        padding: 0;
+        text-align: left;
+    }
+
+    .skills-content {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 10px 20px;
+        gap: 20px;
+    }
+}
+
+
+.scroll-section {
+    overflow: visible !important;
+    padding: 20px 10px !important;
+}
+
+.scroll-section.hidden {
+    display: none !important;
+}
+
+
+@media screen and (max-width: 900px) {
+
+    /* Show tab switcher only on mobile */
+    .tab-switch {
+        display: flex;
+        justify-content: center;
+        gap: 5px;
+        margin: 20px 0;
+    }
+
+    .tab-switch button {
+        padding: 8px 20px;
+        font-size: 16px;
+        /* background-color: #b2b9d0; */
+        /* background-color: #849ea5; */
+                background-color: black;
+        color: white;
+        /* border: 1px solid white; */
+        border-radius: 2px;
+        cursor: pointer;
+        font-weight: bold;
+        transition: background-color 0.3s;
+        /* margin-bottom: 5px; */
+    }
+
+    .tab-switch button.active {
+          background-color: white;
+        color: black;
+        /* border: 1px solid white; */
+                /* margin-right: 5px; */
+    }
+
+    /* Force full width for each section */
+    .horizontal-scroll-container {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .scroll-section {
+        width: 100vw !important;
+        height: auto;
+        padding: 20px 10px !important;
+        overflow: visible !important;
+        transition: none;
+        opacity: 1 !important;
+    }
+
+    .scroll-section.hidden {
+        /* display: none !important; */
+    }
+
+    .scroll-section .cover-photo {
+        /* display: none; */
+    }
+
+    .scroll-section .content {
+        opacity: 1 !important;
+        transform: translateY(0) !important;
+    }
+
+    .overlay-text {
+        display: none;
+    }
+
+    /* Timeline becomes vertical cards */
+    .timeline h1 {
+        text-align: center;
+        font-size: 24px;
+        margin-bottom: 20px;
+        font-family: "Kaushan Script", cursive;
+        font-weight: 400;
+        font-style: normal;
+    }
+
+    .timeline {
+        padding: 0 10px;
+    }
+
+    .timeline ol {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding: 10px 0;
+    }
+
+    .timeline ol li::after,
+    .timeline ol li>div::before {
+        /* display: none !important; */
+    }
+
+    /* .about-sec .timeline ol li:nth-child(odd)>div,
+    .about-sec .timeline ol li:nth-child(even)>div {
+        margin-top: 0 !important;
+        top: 0 !important;
+        text-align: left;
+    } */
+
+    /* Skills grid layout for mobile */
+    .skills-content {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        padding: 10px 20px;
+        gap: 20px;
+    }
+
+    .skill-item {
+        width: 100px;
+        height: 100px;
+    }
+
+    .skill-icon {
+        font-size: 30px;
+    }
+
+    .skill-name {
+        font-size: 14px;
+        top: 90px;
+        width: 120px;
+        text-align: center;
+    }
+
+    body {
+        overflow: auto;
+    }
+
+    .about-sec .timeline ol {
+        padding: 0px;
+    }
+
+    .scroll-section.edusec {
+        overflow: visible;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .scroll-section.edusec {
+        overflow: visible;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .scroll-section.edusec {
+        overflow-y: auto;
+        max-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: stretch;
+    }
+
+    .scroll-section.hidden {
+        /* display: none !important; */
+    }
+
+    .scroll-section.edusec {
+        /* border: 2px dashed red; */
+        min-height: 120vh;
+        /* simulate long content */
+    }
+
+    .skills .skills-content {
+        display: flex;
+        gap: 1rem;
+        overflow-x: auto;
+        overflow-y: hidden;
+        white-space: nowrap;
+        width: 100%;
+        height: 100%;
+        color: wheat;
+        scroll-behavior: smooth;
+        padding-bottom: 1rem;
+        /* Optional: for comfort */
+    }
+
+    /* Add padding or margin to the last item to prevent cut-off */
+    .skills .skills-content>*:last-child {
+        margin-right: 1rem;
+        /* You can increase this if needed */
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .scroll-section.edusec {
+        overflow-y: auto;
+        max-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: stretch;
+        padding: 20px 10px;
+    }
+
+    /* .about-sec .timeline {
+        overflow-y: auto;
+        max-height: 80vh;
+    } */
+}
+
+
+/* hover problem */
+
+/* Only for full screen */
+@media screen and (min-width: 901px) {
+    .scroll-section {
+        width: 100%;
+        max-width: 100%;
+        overflow: visible;
+    }
+
+    .scroll-section.edusec,
+    .scroll-section.skillssec {
+        flex: 1 0 50%;
+        min-width: 50%;
+
+    }
+
+    .scroll-section.edusec,
+    .scroll-section.skillssec {
+        flex: 1 0 50%;
+        /* Initially, both sections take 50% of the space */
+        transition: flex 0.3s ease;
+        /* Smooth transition when resizing */
+    }
+
+    /* When hovering over the Education section */
+    .scroll-section.edusec:hover {
+        flex: 1 0 100%;
+        /* Education section expands to 100% width on hover */
+    }
+
+}
+
+
+
+/* For the Education section */
+.education-section {
+    transition: width 0.3s ease;
+    width: 50%;
+    /* Default width */
+}
+
+.education-section:hover {
+    width: 100%;
+    /* Full width on hover */
+}
+
+
+
+
+
+/* skill sec responsive scroll */
+.skills-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 5rem;
+    padding: 2rem;
+    justify-items: center;
+    overflow-x: hidden;
+}
+
+.skills {
+    min-height: 100%;
+}
+
+.skills .skills-content {
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+
+@media screen and (max-width: 1250px) {
+    .skills .skills-content {
+        display: flex;
+        flex-wrap: wrap;
+        overflow-y: scroll;
+    }
+}
+
+
+/*  */
+.skills-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 2rem 4rem;
+    padding: 1rem 2rem;
+    justify-items: center;
+    overflow-x: hidden;
+}
+
+.skills {
+    max-height: 100%;
+}
+
+
+/* .content {
+    height: 80vw;
+    max-height: 100%;
+} */
+
+.skills .skills-content {
+    height: 80vh;
+    max-height: 100%;
+}
+
+
+@media screen and (min-width: 1500px) {
+    .skills-content {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        gap: 0rem 8rem;
+        margin: 0;
+        padding: 0;
+
+    }
+
+    .skills .skills-content {
+        display: flex;
+        flex-wrap: wrap;
+        overflow-y: hidden;
+    }
+}
+
+
+/* making responsive the skill name and css for sm device */
+body {
+    margin: 0;
+    padding: 0;
+}
+
+@media screen and (max-width: 900px) {
+    .tab-switch {
+        display: flex;
+        justify-content: center;
+        gap: 5px;
+        padding: 20px 0px;
+        margin: 0px 0;
+        background-color: #45707b;
+                padding-bottom: 30px;
+    }
+
+    .scroll-section {
+        width: 100vw !important;
+        height: auto;
+        padding: 0 !important;
+        overflow: visible !important;
+        transition: none;
+        opacity: 1 !important;
+    }
+
+    .skillsec h1 {
+        margin-top: 25px;
+        margin-bottom: 25px;
+    }
+
+    .content {
+        height: 100vh;
+        max-height: 100%;
+    }
+
+    .skills {
+        padding: 0px 10px;
+    }
+
+    .skills .skills-content {
+        height: 100vh;
+        max-height: 100%;
+        /* gap: 3rem; */
+        gap: 2rem 5rem;
+        padding-bottom: 0rem;
+        padding: 0;
+    }
+
+    .skill-name {
+        font-size: 20px;
+        top: 105px;
+    }
+
+
+    .about-sec .timeline ol {
+        box-sizing: border-box;
+    }
+
+    .about-sec .timeline ol {
+        scroll-padding-bottom: 50px;
+    }
+
+    .about-sec .timeline ol li:last-child {
+        margin-bottom: 40px;
+    }
+
+    .timeline .education h4 {
+        margin: 0;
+        padding: 0;
+    }
+
+    /* .about-sec .timeline ol li {
+        background: none;
+        border: none;
+    } */
+
+    .timeline .education h4 {
+        padding-left: 80px;
+    }
+
+    .timeline .education p {
+        padding-left: 70px;
+    }
+
+    .timeline svg:not(:root).svg-inline--fa,
+    .timeline svg:not(:host).svg-inline--fa {
+        position: absolute;
+        left: 47px;
+    }
+
+    /* .about-sec .timeline ol li:nth-child(odd)>div,
+    .about-sec .timeline ol li:nth-child(even)>div {
+        margin-top: 0 !important;
+        top: 0 !important;
+        text-align: left;
+        padding: 20px 0px;
+    } */
+}
+
+
+
+/* trying the final skill sec res */
+
+@media screen and (max-width: 1500px) {
+    .skillsec h1 {
+        margin-top: 12px !important;
+        margin-bottom: 15px !important;
+    }
+
+    .skills-content {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        gap: 0rem 6rem;
+        margin: 0px 0px;
+        padding: 0px 50px;
+    }
+
+    .skills .skills-content {
+        display: flex;
+        flex-wrap: wrap;
+        overflow-y: hidden;
+    }
+}
+
+
+@media screen and (max-width: 1330px) {
+    .skills-content {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        gap: 5rem 8rem;
+        margin: 0px 0px;
+        padding: 0px 30px;
+    }
+
+    .skills .skills-content {
+        display: flex;
+        flex-wrap: wrap;
+        overflow-y: scroll;
+    }
+
+    .skills .skills-content {
+        height: 96vh;
+        max-height: 100%;
+    }
+}
+
+@media screen and (max-width: 1130px) {
+    .overlay-text2 h1 {
+        width: 90%;
+    }
+
+    .overlay-text2 {
+        word-break: break-word;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        white-space: normal;
+    }
+}
+
+
+
+
+@media screen and (min-width: 1500px) {
+    .skillsec h1 {
+        margin-top: 10px !important;
+        margin-bottom: 20px !important;
+    }
+
+    .skills-content {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        gap: 2rem 8rem;
+        margin: 10px 50px;
+        padding: 0;
+    }
+}
+
+@media screen and (min-width: 1950px) {
+    .skills-content {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        gap: 2rem 8rem;
+        margin: 10px 80px;
+        padding: 0;
+    }
+}
+
+
+@media screen and (max-width: 900px) {
+    .skills .skills-content {
+        position: absolute;
+        top: 0;
+        /* left: 0; */
+        right: 0;
+        /* height: 100vh; */
+        height: 80vh;
+        max-height: 100%;
+        /* gap: 3rem; */
+        gap: 5rem 9rem;
+        margin: 0px 15px;
+    }
+
+    .skills .skills-content {
+        display: flex;
+        flex-wrap: wrap;
+        overflow-y: scroll;
+        overflow-x: hidden;
+    }
+
+    .skill-name {
+        white-space: normal;
+    }
+
+    .skills .skills-content {
+        height: 100vh;
+        max-height: 100%;
+    }
+}
+
+
+@media screen and (max-width: 750px) {
+    .skills .skills-content {
+        gap: 5rem 6rem;
+        margin: 0px 15px;
+    }
+
+    .skills .skills-content {
+        height: 100vh;
+        max-height: 100%;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .skills .skills-content {
+        gap: 5rem 4rem;
+        margin: 0px 15px;
+    }
+
+    .skills .skills-content {
+        height: 100vh;
+        max-height: 100%;
+    }
+}
+
+
+@media screen and (max-width: 560px) {
+    .skills .skills-content {
+        gap: 5rem 8rem;
+        margin: 0px 15px;
+    }
+
+    .skills .skills-content {
+        height: 100vh;
+        max-height: 100%;
+    }
+}
+
+
+@media screen and (max-width: 460px) {
+    .skills .skills-content {
+        gap: 5rem 4rem;
+        margin: 0px 15px;
+    }
+
+    .skills .skills-content {
+        height: 95vh;
+        max-height: 100%;
+    }
+}
+
+
+@media screen and (max-width: 400px) {
+    .skills .skills-content {
+        gap: 3rem 5rem;
+        margin: 0px 15px;
+    }
+
+    .skills .skills-content {
+        height: 85vh;
+        max-height: 100%;
+    }
+
+    .skills>div>div {
+        width: 70px;
+        height: 70px;
+    }
+
+    .posbox .skill-icon {
+        width: 40px;
+        height: 40px;
+    }
+
+    .skill-name {
+        font-size: 14px;
+        top: 75px;
+    }
+
+    .percentage {
+        position: absolute;
+        top: 4px;
+        left: -5px;
+        font-size: 28px;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .skills .skills-content {
+        gap: 3rem 3rem;
+        margin: 0px 15px;
+    }
+
+    .skills .skills-content {
+        height: 85vh;
+        max-height: 100%;
+    }
+
+    .skills>div>div {
+        width: 70px;
+        height: 70px;
+    }
+
+    .posbox .skill-icon {
+        width: 40px;
+        height: 40px;
+    }
+
+    .skill-name {
+        font-size: 14px;
+        top: 75px;
+    }
+
+    .percentage {
+        position: absolute;
+        top: 4px;
+        left: -5px;
+        font-size: 28px;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    .skills .skills-content {
+        gap: 3rem 8rem;
+        margin: 0px 15px;
+    }
+
+    .skills .skills-content {
+        height: 100vh;
+        max-height: 100%;
+    }
+
+    .percentage {
+        position: absolute;
+        top: 4px;
+        left: -5px;
+        font-size: 28px;
+    }
+}
+
+/* cover photo skill */
+.overlay-text2 h1 {
+    font-size: 100px;
+    font-family: "Style Script", cursive;
+    font-weight: 800;
+    font-style: normal;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    /* white-space: nowrap; */
+}
+
+.overlay-text2 {
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+.cover-photo img {
+    width: 100%;
+    height: 100%;
+}
+
+
+/* trying to make responsive the about page */
+.timeline .education p {
+    padding-left: 80px;
+    position: relative;
+}
+
+.timeline .education h4 {
+    margin: 0;
+    margin-top: 30px;
+    margin-bottom: 25px;
+    margin-left: 50px;
+}
+
+
+.tabline button {
+  position: relative; /* This is crucial */
+  z-index: 1;
+}
+
+.tabline button:first-child {
+  position: relative;
+}
+
+.left-button::before {
+       content: '';
+    position: absolute;
+    left: calc(-15% - 15px);
+    width: 0px;
+    height: 0;
+    border-style: solid;
+    top: 4%;
+    border-width: 16px;
+    border-color: #000000 transparent transparent transparent;
+    transform: rotate(90deg);
+}
+
+.left-button.active::before {
+    border-color: #ffffff transparent transparent transparent;
+}
+/* Skills active with arrow on right */
+.active-right {
+  background-color: #0f172a;
+  color: white;
+}
+.tabline > button:last-child {
+  position: relative;
+  top: 15px;
+}
+.right-button::after {
+     content: '';
+       position: absolute;
+    left: calc(119% - 16px);
+    width: 0px;
+    height: 0;
+    border-style: solid;
+    top: 2%;
+    border-width: 16px;
+    border-color: #000000 transparent transparent transparent;
+    transform: rotate(270deg);
+}
+
+.right-button.active::after {
+        left: calc(119% - 17px);
+    top: 3%;
+    border-color: #ffffff transparent transparent transparent;
+}
+.btnline{
+position: absolute;
+    top: -19px;
+        left: calc(53% - 13px);
+    height: 109px;
+    width: 5px;
+    background-color: #4c585b;
+    z-index: 999;
+}
+
+@media screen and (max-width: 1700px)and (min-width: 1550px) {
+    .timeline .education h4 {
+        margin: 0;
+        margin-top: 30px;
+        margin-bottom: 25px;
+        margin-left: 50px;
+    }
+
+    .about-sec .timeline ol {
+        padding: 0;
+        /* display: flex; */
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+        width: 90%;
+    }
+
+    .about-sec .timeline {
+        white-space: nowrap;
+        /* display: flex; */
+        justify-content: center;
+    }
+
+    .scroll-section:hover .content {
+        overflow: visible;
+        width: 100%;
+    }
+
+    .about-sec .timeline ol {
+        padding: 359px 30px 325px 71px;
+    }
+}
+
+@media screen and (max-width: 1550px) and (min-width: 900px) {
+    .about-sec .timeline ol {
+        padding: 0;
+        /* display: flex; */
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+        width: 90%;
+    }
+
+    .about-sec .timeline {
+        white-space: nowrap;
+        /* display: flex; */
+        justify-content: center;
+    }
+
+    .scroll-section:hover .content {
+        overflow: visible;
+        width: 95%;
+    }
+
+    .about-sec .timeline ol {
+        padding: 359px 30px 325px 71px;
+    }
+
+    .timeline svg:not(:root).svg-inline--fa,
+    .timeline svg:not(:host).svg-inline--fa {
+        position: absolute;
+        left: -37px;
+    }
+
+    .timeline .education p {
+        padding-left: 0;
+        position: relative;
+    }
+
+    .about-sec .timeline ol li>div {
+        position: absolute;
+        left: -100px;
+        width: 140%;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .horizontal-scroll-container {
+        flex-direction: column;
+        height: auto;
+        /* overflow-y: auto; */
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .about-sec .timeline ol li:nth-child(odd)>div::before {
+        top: 35%;
+        transform: rotate(90deg);
+        left: calc(0% - 31px);
+    }
+
+    .about-sec .timeline ol li:nth-child(even)>div::before {
+        top: 35%;
+        transform: rotate(175deg);
+        left: calc(0% - 31px);
+    }
+
+    .about-sec .timeline ol li::after {
+        display: block;
+        content: '';
+        width: 12px;
+        height: 12px;
+        /* background-color: #9ab6b2; */
+        border-radius: 3px;
+        transform: rotate(45deg);
+        margin: 0 auto;
+        position: absolute;
+        top: 50px;
+        left: calc(-9% - -10px);
+    }
+}
+
+@media screen and (max-width: 900px) {
+    
+    .timeline .education h4 {
+        margin: 0;
+        margin-top: 0;
+        margin-bottom: 0;
+        margin-left: 0px;
+    }
+
+    .timeline ol li {
+        position: static !important;
+        width: 100% !important;
+        height: auto !important;
+        background: #f0f0f0;
+        border-radius: 10px;
+        padding: 20px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        list-style: none;
+        position: absolute;
+        left: 120px;
+    }
+
+    .timeline ol li>div {
+        position: static !important;
+        left: 0 !important;
+        width: 100% !important;
+        margin: 0 !important;
+        padding: 10px 0px;
+    }
+
+    .about-sec .timeline ol li {
+        position: relative;
+        display: inline-block;
+        list-style-type: none;
+        width: 160px;
+        height: 0px;
+        background: #9ab6b2;
+        margin-bottom: 30px !important;
+    }
+
+    .about-sec .timeline ol {
+        padding: 0px;
+        padding: 0px 0px 50px 0px;
+        height: 100vh;
+        max-height: 100vh;
+        overflow-y: auto;
+    }
+
+    .about-sec .timeline ol {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        position: relative;
+        padding-left: 25px;
+        margin-left: 0px;
+    }
+
+    .about-sec .timeline ol::before {
+        content: '';
+        position: absolute;
+        top: 5%;
+        left: 110px;
+        width: 5px;
+        height: 68%;
+        background: #9ab6b2;
+    }
+
+    .about-sec .timeline ol li {
+        position: relative !important;
+        display: block !important;
+        width: 100% !important;
+        height: auto !important;
+        background: transparent !important;
+        border-radius: 10px;
+        padding: 0;
+        margin-bottom: 0px;
+        box-shadow: none;
+        border: none;
+    }
+
+    .about-sec .timeline ol li>div {
+        position: static !important;
+        width: 70% !important;
+        margin: 0 !important;
+        padding: 15px 0px !important;
+        float: left;
+    }
+
+    /* above css conflict */
+
+    .about-sec .timeline ol {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        position: relative;
+        padding-left: 20px;
+        /* space for the line */
+        border-left: 0px solid #9ab6b2;
+        /* vertical line */
+    }
+
+    .about-sec .timeline ol li {
+        display: block;
+        width: auto;
+        height: auto;
+        margin-bottom: 0px;
+        padding-left: 0px;
+        position: relative;
+    }
+
+    .about-sec .timeline ol {
+        display: flex;
+        justify-content: start;
+        width: 100%;
+        padding-left: 50px;
+        scrollbar-width: none;
+    }
+
+    .about-sec .timeline ol li:first-child {
+        margin-top: 50px;
+    }
+
+    .timeline h1 {
+        text-align: center;
+        font-size: 40px;
+        margin-bottom: 40px;
+    }
+
+
+    .scroll-container {
+        scrollbar-width: none;
+        /* Firefox */
+        -ms-overflow-style: none;
+        /* IE 10+ */
+    }
+
+    .scroll-container::-webkit-scrollbar {
+        display: none;
+        /* Chrome, Safari */
+    }
+}
+
+@media screen and (max-width: 800px) {
+     .btnline {
+    position: fixed;
+    top: -19px;
+    left: calc(52% - 0px);
+    height: 109px;
+    width: 5px;
+    background-color: #4c585b;
+    z-index: 999;
+} 
+    .timeline ol li {
+        position: static !important;
+        width: 100% !important;
+        height: auto !important;
+        background: #f0f0f0;
+        border-radius: 10px;
+        padding: 20px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        list-style: none;
+        position: absolute;
+        left: 110px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+     .btnline {
+    position: fixed;
+    top: -19px;
+    left: calc(53% - 0px);
+    height: 109px;
+    width: 5px;
+    background-color: #4c585b;
+    z-index: 999;
+} 
+    .about-sec .timeline ol {
+        width: 100%;
+        padding-left: 0;
+    }
+
+    .about-sec .timeline ol li>div {
+        position: static !important;
+        width: 100% !important;
+        margin: 0 !important;
+        padding: 15px 0px !important;
+    }
+
+    .about-sec .timeline ol::before {
+        content: '';
+        position: absolute;
+        top: 5%;
+        left: 20px;
+        width: 5px;
+        height: 70%;
+        background: #9ab6b2;
+    }
+
+    .about-sec .timeline ol li::after {
+        display: block;
+        content: '';
+        width: 12px;
+        height: 12px;
+        /* background-color: #9ab6b2; */
+        border-radius: 3px;
+        transform: rotate(45deg);
+        margin: 0 auto;
+        position: absolute;
+        top: 52px;
+        /* left: calc(-7% - 9px); */
+        left: calc(-4% - 13px);
+    }
+
+    .timeline ol li {
+        position: relative;
+        left: 55px;
+    }
+
+    .about-sec .timeline ol li>div {
+        position: static !important;
+        width: 80% !important;
+        margin: 0 !important;
+        padding: 15px 0px !important;
+    }
+}
+
+
+@media screen and (max-width: 500px) {
+   .btnline {
+    position: fixed;
+    top: -19px;
+    left: calc(53% - 0px);
+    height: 109px;
+    width: 5px;
+    background-color: #4c585b;
+    z-index: 999;
+} 
+    .about-sec .timeline ol li::after {
+        display: block;
+        content: '';
+        width: 12px;
+        height: 12px;
+        /* background-color: #9ab6b2; */
+        border-radius: 3px;
+        transform: rotate(45deg);
+        margin: 0 auto;
+        position: absolute;
+        top: 52px;
+        left: calc(-5% - 16px);
+    }
+    .about-sec .timeline ol::before {
+        content: '';
+        position: absolute;
+        top: 5%;
+        left: 5px;
+        width: 5px;
+        /* height: 72%; */
+        height: 108%;
+        background: #9ab6b2;
+    }
+}
+
+
+
+@media screen and (max-width: 450px) {
+       .btnline {
+    position: fixed;
+    top: -19px;
+    left: calc(54% - 0px);
+    height: 109px;
+    width: 5px;
+    background-color: #4c585b;
+    z-index: 999;
+} 
+    .about-sec .timeline {
+        /* white-space: nowrap; */
+        /* max-height: unset; */
+        /* height: auto; */
+        /* overflow-y: visible; */
+    }
+
+    /* .about-sec .timeline ol {
+        width: 100%;
+        padding-left: 0;
+                height: 200vh;
+
+    } */
+    .about-sec .timeline ol {
+        padding: 0;
+        /* max-height: none; */
+        /* height: auto; */
+        /* overflow-y: visible; */
+        scrollbar-width: none;
+    }
+
+    .timeline h1 {
+        text-align: center;
+        font-size: 37px;
+        margin-bottom: 30px;
+    }
+
+    .about-sec .timeline ol li::after {
+        display: block;
+        content: '';
+        width: 12px;
+        height: 12px;
+        /* background-color: #9ab6b2; */
+        border-radius: 3px;
+        transform: rotate(45deg);
+        margin: 0 auto;
+        position: absolute;
+        top: 52px;
+        left: calc(-7% - 14px);
+    }
+
+    .about-sec .timeline ol::before {
+        content: '';
+        position: absolute;
+        top: 5%;
+        left: 5px;
+        width: 5px;
+        /* height: 72%; */
+        height: 108%;
+        background: #9ab6b2;
+    }
+
+    .timeline ol li {
+        position: relative;
+        left: 43px;
+    }
+
+    .timeline .education h4 {
+        padding-left: 57px;
+    }
+
+    .timeline svg:not(:root).svg-inline--fa,
+    .timeline svg:not(:host).svg-inline--fa {
+        position: absolute;
+        left: 20px;
+    }
+
+    .timeline .education p {
+        padding-left: 60px;
+        position: relative;
+    }
+
+    .about-sec .timeline ol {
+        width: 100%;
+        padding-left: 0;
+        /* height: 2000px; */
+        /* max-height: 1200px; */
+    }
+    .about-sec .timeline ol li:last-child {
+    background-color: #fdd;
+    margin-bottom: 300px !important; 
+}
+  .about-sec .timeline ol li:nth-child(even)>div::before {
+        top: 35%;
+        transform: rotate(180deg);
+        left: calc(0% - 31px);
+    }
+}
+
+
+
+@media screen and (max-width: 350px) {
+       .btnline {
+    position: fixed;
+    top: -19px;
+    left: calc(54% - 0px);
+    height: 109px;
+    width: 5px;
+    background-color: #4c585b;
+    z-index: 999;
+} 
+    .about-sec .timeline ol {
+        width: 100%;
+        padding-left: 0;
+        /* height: 200vh; */
+
+    }
+
+    .about-sec .timeline ol li>div {
+        position: static !important;
+        width: 100% !important;
+        margin: 0 !important;
+        padding: 15px 0px !important;
+    }
+
+    .about-sec .timeline ol::before {
+        content: '';
+        position: absolute;
+        top: 2%;
+        left: 5px;
+        width: 5px;
+        /* height: 72%; */
+        height: 100%;
+        background: #9ab6b2;
+    }
+
+    .about-sec .timeline ol li::after {
+        display: block;
+        content: '';
+        width: 12px;
+        height: 12px;
+        /* background-color: #9ab6b2; */
+        border-radius: 3px;
+        transform: rotate(45deg);
+        margin: 0 auto;
+        position: absolute;
+        top: 56px;
+        left: calc(-8% - 9px);
+    }
+
+    .timeline ol li {
+        position: relative;
+        left: 55px;
+    }
+
+    .about-sec .timeline ol li>div {
+        position: static !important;
+        width: 80% !important;
+        margin: 0 !important;
+        padding: 15px 0px !important;
+    }
+
+    .timeline h1 {
+        text-align: center;
+        font-size: 28px;
+        margin-bottom: 10px;
+    }
+
+    .timeline ol li {
+        position: relative;
+        left: 35px;
+    }
+
+    .timeline .education h4 {
+        padding-left: 40px;
+    }
+
+    .timeline svg:not(:root).svg-inline--fa,
+    .timeline svg:not(:host).svg-inline--fa {
+        position: absolute;
+        left: 20px;
+    }
+
+    .timeline .education p {
+        padding-left: 50px;
+        position: relative;
+    }
+        .about-sec .timeline ol li:nth-child(even)>div::before {
+        top: 35%;
+        transform: rotate(180deg);
+        left: calc(0% - 31px);
+    }
+}
+
+
+@media screen and (max-width: 280px) {
+    .about-sec .timeline ol {
+        width: 100%;
+        padding-left: 0;
+    }
+
+    .about-sec .timeline ol li>div {
+        position: static !important;
+        width: 100% !important;
+        margin: 0 !important;
+        padding: 15px 0px !important;
+    }
+
+    .about-sec .timeline ol::before {
+        content: '';
+        position: absolute;
+        top: 2%;
+        left: 1px;
+        width: 5px;
+        height: 80%;
+        background: #9ab6b2;
+    }
+
+    .about-sec .timeline ol li::after {
+        display: block;
+        content: '';
+        width: 12px;
+        height: 12px;
+        /* background-color: #9ab6b2; */
+        border-radius: 3px;
+        transform: rotate(45deg);
+        margin: 0 auto;
+        position: absolute;
+        top: 56px;
+        left: calc(-8% - 9px);
+    }
+
+    .timeline ol li {
+        position: relative;
+        left: 28px;
+    }
+
+    .about-sec .timeline ol li>div {
+        position: static !important;
+        width: 80% !important;
+        margin: 0 !important;
+        padding: 15px 0px !important;
+    }
+
+    .timeline h1 {
+        text-align: center;
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+
+    .timeline .education h4 {
+        padding-left: 10px;
+    }
+
+    .timeline svg:not(:root).svg-inline--fa,
+    .timeline svg:not(:host).svg-inline--fa {
+        position: absolute;
+        left: 12px;
+    }
+
+    .timeline .education p {
+        padding-left: 37px;
+        position: relative;
+    }
+   .btnline {
+    position: fixed;
+    top: -19px;
+    left: calc(56% - 0px);
+    height: 109px;
+    width: 5px;
+    background-color: #4c585b;
+    z-index: 999;
+} 
+}
+
+
+@media screen and (max-width: 200px) {
+        .about-sec .timeline ol::before {
+        content: '';
+        position: absolute;
+        top: 2%;
+        left: 1px;
+        width: 5px;
+        height: 87%;
+        background: #9ab6b2;
+    }
+.btnline {
+    position: fixed;
+    top: -19px;
+    left: calc(56% - 0px);
+    height: 109px;
+    width: 5px;
+    background-color: #4c585b;
+    z-index: 999;
+}
+}

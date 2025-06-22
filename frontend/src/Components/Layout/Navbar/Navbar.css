@@ -8,6 +8,10 @@
     /* A nice blue color */
     color: white;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    font-family: "Kaushan Script", cursive;
+    font-weight: 400;
+    font-style: normal;
+    
 }
 
 .navbar-title {
@@ -27,6 +31,7 @@
     color: white;
     /* Link color */
     transition: color 0.3s ease;
+    
 }
 
 .navbar-links li a:hover {
@@ -111,6 +116,7 @@
 
 
 .menu li button {
+    
     color: white;
     text-decoration: none;
     font-size: 22px;
@@ -121,6 +127,8 @@
     background: none;
     /* Ensures no background styling */
     cursor: pointer;
+    padding: 0;
+    margin: 0;
 }
 
 .menu a:hover {
